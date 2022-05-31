@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(212, 202, 202);
+  background-color: #F6F6F6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-container {
+  width: 430px;
+  height: 660px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background-color: #57606f;
+  box-shadow: 13px 13px 20px #878d97,
+  -13px -13px 20px rgb(226, 218, 218);
+}
+
+.logo {
+  background: url(logo.png);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px #57606f,
+  8px 8px 15px #8891a0,
+  -8px -8px 15px rgb(184, 178, 178);
+}
+
+.input-fields svg {
+  height: 22px;
+  margin: 0 10px -3px 25px;
+  fill: #dbd5d5;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 18px;
+  letter-spacing: 0.5px;
+}
+
+.input-fields {
+  width: 100%;
+  padding: 75px 5px 5px;
+}
+.input-fields input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color:rgb(212, 202, 202);
+  padding: 20px 10px 20px 5px;
+}
+
+.input-fields input::placeholder {
+  color:#57606f;
+}
+
+.username, .password {
+  margin: 5px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #383c44, inset -8px -8px 8px #575b60;
+}
+
+.username-msg, .password-msg {
+  font-size: 17px;
+  color: #e55050;
+  display: inline-block;
+  margin: 5px 0px 0px 34px;
+  font-weight: 100;
+  height: 25px;
+}
+
+.signin-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d4caca;
+  text-align: center;
+  background-color: #242323;
+  box-shadow: 3px 3px 8px #000000, -3px -3px 8px #666d79;
+  transition: all 0.5s;
+}
+.signin-button:hover {
+  color: #57606f;
+  background-color: #d4caca;
+  box-shadow: 3px 3px 8px #4e4d4d, -3px -3px 8px #666d79;
+}
+
+.signin-status {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #00db49;
+  font-weight: 700;
+  transition: .2s linear;
+}
