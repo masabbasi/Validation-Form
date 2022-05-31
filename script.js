@@ -9,15 +9,15 @@ signInBtn.addEventListener("click",signIn)
 
 function signIn (e) {
     e.preventDefault();
-    // userNameInput.value="";
-    // PasswordInput.value="";
+    userNameInput.value="";
+    passwordInput.value="";
     userNameMsg.innerText="";
     passwordMsg.innerText="";
     const usernameValue = userNameInput.value;
     const passwordValue = passwordInput.value;
     let validData = true;
     if (usernameValue.length===0 || usernameValue.indexOf('@')===-1 || usernameValue.indexOf('.')===-1) {
-        userNameMsg.innerText="Enter A Valid UserName!"
+        userNameMsg.innerText="Please Enter A Valid UserName!"
         validData = false;
     }
     if (passwordValue.length===0) {
