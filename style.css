@@ -126,4 +126,8 @@ body {
   .input-fields {
     padding: 30px 5px 5px;
   }
+  .input-fields input {
+    padding: 15px 0px 20px 5px;
+  }
+
 }
