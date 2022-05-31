@@ -9,8 +9,6 @@ signInBtn.addEventListener("click",signIn)
 
 function signIn (e) {
     e.preventDefault();
-    userNameInput.value="";
-    passwordInput.value="";
     userNameMsg.innerText="";
     passwordMsg.innerText="";
     const usernameValue = userNameInput.value;
