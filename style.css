@@ -84,7 +84,7 @@ body {
   height: 25px;
 }
 
-.signin-button {
+.signin-btn {
   outline: none;
   border: none;
   cursor: pointer;
@@ -100,13 +100,13 @@ body {
   box-shadow: 3px 3px 8px #000000, -3px -3px 8px #666d79;
   transition: all 0.5s;
 }
-.signin-button:hover {
+.signin-btn:hover {
   color: #57606f;
   background-color: #d4caca;
   box-shadow: 3px 3px 8px #4e4d4d, -3px -3px 8px #666d79;
 }
 
-.signin-status {
+.signin-msg {
   display: inline-block;
   text-align: center;
   width: 100%;
