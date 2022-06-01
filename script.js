@@ -14,15 +14,36 @@ function signIn (e) {
     const usernameValue = userNameInput.value;
     const passwordValue = passwordInput.value;
     let validData = true;
-    if (usernameValue.length===0 || usernameValue.indexOf('@')===-1 || usernameValue.indexOf('.')===-1) {
+    // if (usernameValue.length===0 || usernameValue.indexOf('@')===-1 || usernameValue.indexOf('.')===-1) {
+    //     userNameMsg.innerText="Please Enter A Valid UserName!"
+    //     validData = false;
+    // }
+    // if (passwordValue.length===0) {
+    //     passwordMsg.innerText="Please Enter A Valid Password!"
+    //     validData = false;
+    // } else if (passwordValue.length<=7) {
+    //     passwordMsg.innerText="Password Too Short!";
+    //     validData = false;
+    // }
+    const userNameRegEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+    const passwordRegEx = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
+
+    if (usernameValue.length===0) {
+        userNameMsg.innerText="Please Enter A UserName!"
+        validData = false;
+    } else if (!userNameRegEx.test(usernameValue)) {
         userNameMsg.innerText="Please Enter A Valid UserName!"
         validData = false;
     }
-    if (passwordValue.length===0) {
-        passwordMsg.innerText="Please Enter A Valid Password!"
-        validData = false;
-    } else if (passwordValue.length<=7) {
-        passwordMsg.innerText="Password Too Short!";
+    // if (passwordValue.length===0) {
+    //     passwordMsg.innerText="Please Enter A Password!"
+    //     validData = false;
+    // } else if (passwordValue.length<=7) {
+    //     passwordMsg.innerText="Password Too Short!";
+    //     validData = false;
+    // }
+    if (!passwordRegEx.test(passwordValue)) {
+        passwordMsg.innerText="1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long";
         validData = false;
     }
 
